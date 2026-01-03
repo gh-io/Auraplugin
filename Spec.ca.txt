@@ -1,0 +1,306 @@
+97:70:33:82:fd:29:3a:73:39:af:6a:07:ad:f8:80:49 (RSA)
+Server SHA256 Fingerprint ohD8VZEXGWo6Ez8GSEJQ9WpafgLFsOfLOtGGQCQo6Og (RSA)
+
+MD5 token 
+
+1GVH79uo5iwkJZhFfvoh2AMVs0NrB7qgQ2XvNlXpMzKZo0KdERWBJQQJ99BLACAAAAAQIcR1AAASAZDOehGP
+
+QueryJobHistoryForRetiredImages.ps1 <ssh.dev.azure.com> <1GVH79uo5iwkJZhFfvoh2AMVs0NrB7qgQ2XvNlXpMzKZo0KdERWBJQQJ99BLACAAAAAQIcR1AAASAZDOehGP>
+From kubulee.kl@gmail.com Sat Dec 06 06:09:00 2025
+Received: from ip-10-0-0-144.ec2.internal ([10.0.0.144] helo=pan.w3.org)
+	by mab.w3.org with esmtps  (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96)
+	(envelope-from <kubulee.kl@gmail.com>)
+	id 1vRlTY-00BFxY-2i
+	for public-gpu@listhub.w3.internal;
+	Sat, 06 Dec 2025 06:09:00 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=w3.org; s=s1; 
+h=Content-Type:
+To:
+Subject:
+Message-ID:
+Date:
+From:
+MIME-Version:
+Cc:
+Reply-To:
+In-Reply-To:
+References; bh=naqBg1QQwC7kjf3ASQGMt8L/94xhDPMPhQ6mnUhLFnw=;
+	t=1765001340; x=1765865340; b=V2hCxdQ3OyrXRq05Mo4OvD6A8Dm9MhcB5IyAurmwJnYlr+7hojrbRMcs5XjW3zU0Hsu5c72h4d3RgweKsU1D0BU+2GVKPvKXzLLvIbOwtSsziuNNxwdd4elWW9kE99UzJYMFw24yTA2c/LsfStfExeF35Es9fu+N66DGoIgvB1FVs+acisJVyIMnL9Ju5/A/HHsfrqmZiqvWXAWq6hYOZXSHnQgqPG7gcniYxNvjIep+9gyvFkCUNX5j44hU451rdIdVkLHaDvUPmBuRbSu1DN
+	xRZDcOvvEAPpC0J1/tSYdbi6VH3peW0ySG9tOy58WoFtchEeaJOLI71VfSCqyH3A==
+Received-SPF: pass (pan.w3.org: domain of gmail.com designates 2a00:1450:4864:20::530 as permitted sender) client-ip=2a00:1450:4864:20::530; envelope-from=kubulee.kl@gmail.com; helo=mail-ed1-x530.google.com;
+Received: from mail-ed1-x530.google.com ([2a00:1450:4864:20::530])
+	by pan.w3.org with esmtps  (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96)
+	(envelope-from <kubulee.kl@gmail.com>)
+	id 1vRlTY-005TKr-09
+	for public-gpu@w3.org;
+	Sat, 06 Dec 2025 06:09:00 +0000
+Received: by mail-ed1-x530.google.com with SMTP id 4fb4d7f45d1cf-641977dc00fso3600842a12.1
+        for <public-gpu@w3.org>; Fri, 05 Dec 2025 22:08:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1765001336; x=1765606136; darn=w3.org;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=naqBg1QQwC7kjf3ASQGMt8L/94xhDPMPhQ6mnUhLFnw=;
+        b=OamN8vkCXK/ng7jmyjg5TLW6Lmg7bpeVBapkmA7bfzRb5HBpgHD0cVQRg00yY8wvPN
+         9X+BIO8fE7vYaZ2Q4VpYC0sfTW6bXm9fKacfyahBrgcZQxDWgBwCTQA1VgCzlIZg9d8p
+         LLgwDejqnyNSyinmzlaIAESU51zs8jrElbJsWeLzKxoP5I5U1c1oxy97rolsh1Au+OC0
+         rzprBJw3F3OvXsyZHhrJwV687Plwzj+fnE+I8lN1ckyi09OoOPOwZ8+beZar7WCf2Q7d
+         VST0eWT03e07iE85EBQ6AlS5mdyeTANFh+yIa8bOdajNOXsr4xviYzoeTxQ+KFyel6HK
+         kZ5g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1765001336; x=1765606136;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=naqBg1QQwC7kjf3ASQGMt8L/94xhDPMPhQ6mnUhLFnw=;
+        b=awQM3qRGT7HbGOFqY1FKdMg1y5XkqJb85cCG0JuEj1wv8Sjerxneu41cpNA/WMeMHQ
+         tJDhsPiGhMjsA4fKWnesGBs8dOHwkb7UIvq4hthoEPC7sF7PdzlVsgxpifVITmQ6Hv2+
+         MjHumPRMaR40yEN7Rrwg5SRqSC8JNnpBjyKNQlz4eq4tbQEQ2Sd4kirU1vMy+hC9Q6OT
+         4ljaY2DqmhecRxrjRRrjyxCdoXgP4bnnCfgHzmbUyAGEwPHC33xVNjPNvenGeR70+KzG
+         maXisVXrq706spLIprPv54Et5bFCgJdkxA398SE3IGnqIg9nQ9axkzoDgB7cREGH1LzN
+         MrKA==
+X-Gm-Message-State: AOJu0YxaGfESmEdRmaumBS+d7wnfKrdMWdzMOIxFzyuzOXtjRXj0Z9qX
+	zg4iyKsuBlY26Xl1ndHZCa394Xl5qsS8AaH4jjYCLuHk+yjoqek0KDptXoyn4jECwFoAxhpw9qW
+	OE3NbU18sdSQkTJ+1KcfSn+enAh0n5WROZCwV+q0=
+X-Gm-Gg: ASbGncvQ++PcbAJa2i5dlm002FzbbGe1uXNrxGMFhMhjRRcA2X4cYfSW+FXDOsF9GgD
+	scNpi70qzxpE5pEKpideO5s0LkMruZGYw1gg7YHgshjvvM8Pnz6XXqZxdCWkaRSTBc+j7tb6rgG
+	Cm9zayCBk5Xd9kqnTlwoSaUeJxT5pOkuVNxCIuVCbRJoBYc/Jt3DYqFW6sEXqZJ9spep54y/0pX
+	sekPMFShMmn+k+J7s++lZ0Pq+rdGULC1xVKPFB7W/9f7+tYrKCxT6mbkCqZMyCHa0L76U5LFQ8=
+X-Google-Smtp-Source: AGHT+IEWJQlP9VuxL7z1RFs2i/3k2KQAzuG0QjgaYVDV6iXmdDv/D7nEJlFfH30nbxwPZ1fbHWcxchEGOCm3ltAGpn0=
+X-Received: by 2002:a17:906:794e:b0:b72:70ad:b8f0 with SMTP id
+ a640c23a62f3a-b7a2477ab6dmr146511566b.36.1765001335783; Fri, 05 Dec 2025
+ 22:08:55 -0800 (PST)
+MIME-Version: 1.0
+From: Seriki Olalekan <kubulee.kl@gmail.com>
+Date: Sat, 6 Dec 2025 07:08:44 +0100
+X-Gm-Features: AQt7F2rRjkIeeD9bxXHBFZamSDIBBIsc5bOuPKqjvynIidYTm9Gu5VHUPdic3mc
+Message-ID: <CAA_MsPxRtBTNJ1YYPxMcvjpnN3wNZ9=bUXjKeaqosNnrPJXvUA@mail.gmail.com>
+To: public-gpu@w3.org
+Content-Type: multipart/alternative; boundary="000000000000a5c27f06454265ba"
+X-Original-To: public-gpu@w3.org
+Subject: Webgpu
+
+
+Author
+Seriki yakub
+
+
+Inline images
+AURA
+Ecosystem, Qubuhub
+gravatar.com/167559384web4application
+
+[HTML portion of the message]:
+
+Author 
+Seriki yakub 
+
+
+Inline images
+AURA
+Ecosystem, Qubuhub
+gravatar.com/167559384web4application
+ 
+
+[this section was converted from HTML to plain text using w3m]
+From kubulee.kl@gmail.com Sat Dec 06 06:34:54 2025
+Received: from ip-10-0-0-144.ec2.internal ([10.0.0.144] helo=pan.w3.org)
+	by mab.w3.org with esmtps  (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96)
+	(envelope-from <kubulee.kl@gmail.com>)
+	id 1vRlsc-00BHfp-1w
+	for public-gpu@listhub.w3.internal;
+	Sat, 06 Dec 2025 06:34:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=w3.org;
+	s=s1; h=Content-Type:To:Subject:Message-ID:Date:From:MIME-Version:Cc:Reply-To
+	:In-Reply-To:References; bh=jzu3JFUEkHQQdBHATbo40s/sI8HtVM5Y22piV8YylOw=;
+	t=1765002894; x=1765866894; b=DqnervTXTh/gPfm5i+QgULc8XfxT0yX1dPCLAJsha06n228
+	updSvDFww+SGkNk2oH83s4RJhstAj+YAu64Rau2PRe0xLLEB6RtWGJ/uakz6fqwpYsn7j/roNTbm+
+	3w3LKxoQ2Bo13h01ISo4G8pzZjUqYQKlix2pLIdNmkhVjHqnxUsO6PP3/PQ7koGfoiTcpqY1+xdQK
+	lcEeXpRatQJY9xqE+NC8twrQkK/lzdSX/ncSIn0nv0JraU/60cgx6A45iCkbxwPxPu6MoTm7I5qNy
+	DJlezVeg6008QlKcNiihEPEVLHxQ8SnnUjyfhZLm8NoCJleDyX47eSeuw37ngLmQ==;
+Received-SPF: pass (pan.org: domain of gmail.com designates 2a00:1450:4864:20::636 as permitted sender) client-ip=2a00:1450:4864:20::636; envelope-from=kubulee.kl@gmail.com; helo=mail-ej1-x636.google.com;
+Received: from mail-ej1-x636.google.com ([2a00:1450:4864:20::636])
+	by pan.w3.org with esmtps  (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96)
+	(envelope-from <kubulee.kl@gmail.com>)
+	id 1vRlsc-005TZX-0E
+	for public-gpu@w3.org;
+	Sat, 06 Dec 2025 06:34:54 +0000
+Received: by mail-ej1-x636.google.com with SMTP id a640c23a62f3a-b7277324054so396481366b.0
+        for <public-gpu@w3.org>; Fri, 05 Dec 2025 22:34:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1765002890; x=1765607690; darn=w3.org;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=jzu3JFUEkHQQdBHATbo40s/sI8HtVM5Y22piV8YylOw=;
+        b=YRtmeRT6TSf2B05RY/Rx/9wxMrLVyRDw4gAeQnQNsY2M7tUxBV/Z/uVuZT0PNIVxa5
+         /AKFRuGi+ql+n8aM7q/OyvniABI7ZX7tNySyTR4429cieMcC6riggqCKtD0QVeyp8896
+         cX2fTJ6LqcMoPaIvjdzSwtOQ0B0jQOL1tg3DUBUtf/QRHzGLe5FjzQXSWHnZFxU/VTAi
+         T6eACnO0Vc1XeSkrkmiZCrI0QqfgUihx334hwIt5JvsOxqomLc7nGBeuZGUUB1wlKvkg
+         hFLXec8s2fdxYyTtwalzQqCIP6reuj6NxamKPA5eDdvap4XW1+L1PBoSrPX60kkbJ/2R
+         pmGA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1765002890; x=1765607690;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jzu3JFUEkHQQdBHATbo40s/sI8HtVM5Y22piV8YylOw=;
+        b=l936g6qpWhcFJgBpF8vCLVzZKOFMEXcZigDK1jx3ReY0A+X8QT9C4089Prg4MU+yX6
+         4wgjottkBHHfIgkQ+lr8YFjZzYetFhT7ppB3cyA8AhdQC13aym/2fFHyNcC1ASo5ZQAg
+         cBMUJPoaqMXbDIsOBh44uCgELcAwayfs96Y/jB/zMYJaQDpTw51wiYKXlAnkLBrMak1j
+         QMcY1lXJfTiN3RLZMKrS8vxbVUQ4JOKWz0H4AEHDq4GkO+3EvVOPXAv4oPlPiJUzYhlc
+         Ugu3IXjwdIDG1q8SYwnUty+RwzW9DQZ+oqkreaZq9GH8XD58a3d39Di+7zjQ4ROi3zVg
+         Cu7g==
+X-Gm-Message-State: AOJu0YxP9vGK4sX2P+qHniC13pKvNA1lzPRt4A946cy7P08Wv7eOHtCm
+	pRFu45Ofr7Bg+ez+OpMoeDnJEiXo6+9HQi1VWbiz+2bkSJp6sf7ckyGyFUfInKJ9qv9DVqcjmK3
+	zClK/4UY2Zh0jivp4YwJwkdpso7Rjfds9IDWOUJU=
+X-Gm-Gg: ASbGncvqRkVwlpiBz3uvCuMEOifuguWgUq9EPnigJ0wBs7txv/rbOqZ7poKyk3kTNuy
+	lN1qja1f1CHVP6rwFQxjs78CjLhJKLMRpDqh6JljYlgDwpFfWVw68v/tTfMekvByrqxETQ5jpGp
+	7LM9ffPJpTUncGYL+EqDMYORO8kQ7P9dXD58u3s+jS6cGsothe8s8Biyn6qfdH7J6e19/1d/pzT
+	pcN5V3uAuST2IFQF6bXVjttO1j0OMfQF5qpcrweH7IdjCRpCZUzuekoGHIghbWbivXNmtpaSIj3
+	TxpPHo2Ccw==
+X-Google-Smtp-Source: AGHT+IGo8vIvn62XkFLBI50ki6v2N097TIWRIDE1i7i1Ppda2sNeh1NExF22Fgm3FcobzKpXfWzx2qgwsrjfJ9CHuEs=
+X-Received: by 2002:a17:906:7308:b0:b33:b8bc:d1da with SMTP id
+ a640c23a62f3a-b7a2428bd80mr147364066b.1.1765002889758; Fri, 05 Dec 2025
+ 22:34:49 -0800 (PST)
+MIME-Version: 1.0
+From: Seriki Olalekan <kubulee.kl@gmail.com>
+Date: Sat, 6 Dec 2025 07:34:38 +0100
+X-Gm-Features: AWmQ_bnfajGQrElYrz9z_AKE0y5Grq_PkNiAT33aCK2K9sP9_CglKVJDfslr-SM
+Message-ID: <CAA_MsPx07nLNNAN4zCnhe3_itmQ1Xdke=aopjfchOGdo1hoGgA@mail.gmail.com>
+To: public-gpu@w3.org, public-gpu@listhub.w3.internal, 
+	CAA_MsPxRtBTNJ1YYPxMcvjpnN3wNZ9=bUXjKeaqosNnrPJXvUA@mail.gmail.com
+Content-Type: multipart/alternative; boundary="000000000000458c45064542c21e"
+X-Original-To: public-gpu@w3.org
+Subject: http://mab.w3.org http://pan.w3.org
+
+
+Inline images
+AURA
+Ecosystem, Qubuhub
+gravatar.com/167559384web4application
+
+[HTML portion of the message]:
+
+
+
+
+Inline images
+AURA
+Ecosystem, Qubuhub
+gravatar.com/167559384web4application
+ 
+
+[this section was converted from HTML to plain text using w3m]
+
+From kubucoin@proton.me Sat Dec 06 06:27:36 2025
+> > Received: from ip-10-0-0-144.ec2.internal ([10.0.0.144] helo=pan.w3.org)
+> > by mab.w3.org with esmtps (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+> > (Exim 4.96)
+> > (envelope-from kubucoin@proton.me)
+> > id 1vRllY-00BGlW-02
+> > for www-talk-request@listhub.w3.internal;
+> > Sat, 06 Dec 2025 06:27:36 +0000
+> > DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=pan.org;
+> > s=s1; h=Content-Type:MIME-Version:Message-ID:Subject:From:To:Date:Cc:Reply-To
+> > :In-Reply-To:References; bh=+X3mfRbCjdjWIDGMoKMTjP1IkkYOCOmNyYOgKbOA1Y4=;
+> > t=1765002456; x=1765866456; b=hi4mYIBeM1KZ2y2972tZV6FIxv1FmLIbSxO1yw5v77WXdtu
+> > 8Iy0hrTQy/jyS5ZvcLRqwsw9+2rZ9iU7TpCELwOKCpYW/judQPWOoZOSRu+KiAvww/Pn9QgpZmKty
+> > YmwU9p2LCihQc8cSzqe92xzhIOg+Zl5mm5VrWPFqEdiZKWQzYktf6GLTcswXB3a4lD7qS3/KnYJC1
+> > VlDEjYll3xF43FVznwtZxvxmXw8kZkgBCdLLWAETxKLr/ZMF040kMJ7qVvm3bSfT9xdDYkoI9Jfmc
+> > dMd+5Rgcy2Yem9juqbOZG0/frKz/I0t9E2v/+ODVDjO5bPajI4SvOWOqxpfukbFw==;
+> > Received-SPF: pass (pan.w3.org: domain of proton.me designates 79.135.106.103 as permitted sender) client-ip=79.135.106.103; envelope-from=kubucoin@proton.me; helo=mail-106103.protonmail.ch;
+> > Received: from mail-106103.protonmail.ch ([79.135.106.103])
+> > by pan.w3.org with esmtps (TLS1.3) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+> > (Exim 4.96)
+> > (envelope-from kubucoin@proton.me)
+> > id 1vRllW-005TUR-2y
+> > for www-talk-request@w3.org;
+> > Sat, 06 Dec 2025 06:27:35 +0000
+> > DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=proton.me;
+> > s=protonmail; t=1765002450; x=1765261650;
+> > bh=+X3mfRbCjdjWIDGMoKMTjP1IkkYOCOmNyYOgKbOA1Y4=;
+> > h=Date:To:From:Subject:Message-ID:Feedback-ID:From:To:Cc:Date:
+> > Subject:Reply-To:Feedback-ID:Message-ID:BIMI-Selector;
+> > b=QuKtwDUt8jquTp0iAcGjm1APn3uWvyi8ZfEMocrfZAsOZBNdQZEhNiSC15HSoNcyh
+> >1khJ4iGlQsez/e8z+eEccNazll29g1pX61Oo/peRsUONSIO6YuAWoLmNc1XYE+Z172
+> >qcrqYSsLPS/XOcsA2H+USjGZOUeP4bDAV9lrBshILxSApcmwq+B7WAnvx/61TPS5D/
+> >M7ghZAD322r0laTeuih3PLPBW9YhaVRCHwKBukfGuDwxPvBtN5yXKXtJLOQS58Ia4n
+> >n4xc9qEw9UyZs2eOhvAxfqxtNoP4LYz2/Kqtsk7HT3NVs24txm6QWEMyFrKc+oj5IP
+> > F4OtGqy0GJLgQ==
+> > Date: Sat, 06 Dec 2025 06:27:26 +0000
+> > To: "www-talk-request@w3.org" www-talk-request@w3.org
+> > From: web4 kubucoin@proton.me
+> > Subject: subscribe
+> > Message-ID:-qvqxbxQ7jf4i7ifEbVprGchyAY6XyglUrUFGjHGxsk2chkof2EdyDIub4pFEipAjN70sBifO5jAox6MsX98zkOA=@pan.org > > Feedback-ID: 82453583:user:proton
+> > X-Pm-Message-ID: 2db82f5723054760371b9f290c8ce35f52682c90
+> > MIME-Version: 1.0
+> > Content-Type: multipart/signed; protocol="application/pgp-signature"; micalg=pgp-sha512; boundary="------0b027a28ff7b3679d62bf9c0645e237c84323df6101b13efec2cbda6c95991db"; charset=utf-8
+> > X-W3C-Hub-DKIM-Status: validation passed: (address=kubucoin@proton.me domain=pan.org), signature is good
+> > X-W3C-Hub-Spam-Status: No, score=0.8
+> > X-W3C-Hub-Spam-Report: BAYES_20=-0.001, DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1, DKIM_VALID_EF=-0.1, DMARC_PASS=-0.001, RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_VALIDITY_CERTIFIED_BLOCKED=0.001, RCVD_IN_VALIDITY_RPBL_BLOCKED=0.001, RCVD_IN_VALIDITY_SAFE_BLOCKED=0.001, SPF_HELO_PASS=-0.001, SPF_PASS=-0.001, W3C_NW=1
+> > 
+X-W3C-Scan-Sig: pan.w3.org 1vRllW-005TUR-2y   
+1800c7d661c66a7cc84a83fc33e2945f
+> > 
+> > This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+> >
+ --------
+0b027a28ff7b3679d62bf9c0645e237c84323df6101b13efec2cbda6c95991db
+> > 
+Content-Type: multipart/mixed;boundary=
+---------------------cbf3826614537f7f6afd4e5acdd8c280
+> > 
+> > -----------------------cbf3826614537f7f6afd4e5acdd8c280
+> > Content-Transfer-Encoding: quoted-printable
+> > Content-Type: text/plain;charset=utf-8
+> > 
+> > QUBUHUB.org,
+> > 
+> > Sent with Proton Mail secure email.
+> > -----------------------cbf3826614537f7f6afd4e5acdd8c280
+> > Content-Type: application/pgp-keys; filename="publickey - kubucoin@proton.me - 0xF114C34E.asc"; name="publickey - kubucoin@proton.me - 0xF114C34E.asc"
+> > Content-Transfer-Encoding: base64
+> > Content-Disposition: attachment; filename="publickey - kubucoin@proton.me - 0xF114C34E.asc"; name="publickey - kubucoin@proton.me - 0xF114C34E.asc"
+> > 
+> > LS0tLS1CRUdJTiBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tCgp4ak1FWk1rOUZoWUpLd1lCQkFI
+> > YVJ3OEJBUWRBaE9VM1l3YVIzYUVSSzZlZlZtUklHTk5TdFlBUlhlK2cKRE9SMTcwNHI3UjNOSjJ0
+> > MVluVmpiMmx1UUhCeWIzUnZiaTV0WlNBOGEzVmlkV052YVc1QWNISnZkRzl1CkxtMWxQc0tNQkJB
+> > V0NnQStCWUpreVQwV0JBc0pCd2dKa0c5OXNrUko0WDJrQXhVSUNnUVdBQUlCQWhrQgpBcHNEQWg0
+> > QkZpRUU4UlREVGhjcDY2ckZmVzZCYjMyeVJFbmhmYVFBQUIrZ0FQNHEzTTROaitVd1hRK1EKajVC
+> > UldFMElBQjRBeXJkUUx6VDRKWFpzOTNmL0xRRUFtWjJmOW9oeGMwMHdxL2VmOTh5eHF6aDRib0tC
+> > CnlSc0Z0SnpHM2JWRFlnWE9PQVJreVQwV0Vnb3JCZ0VFQVpkVkFRVUJBUWRBTVlML2ViSDJWcith
+> > MUhzYgo3NFdIejhIOFVDVU1pOGZscllZQ1Y5TGxMRm9EQVFnSHduZ0VHQllJQUNvRmdtVEpQUllK
+> > a0c5OXNrUkoKNFgya0Fwc01GaUVFOFJURFRoY3A2NnJGZlc2QmIzMnlSRW5oZmFRQUFPL3ZBUDk0
+> > VFhvL0NuZUYvUGNUClg1amtZRjJPeGtaWUpJYnZrR24wRXhQZFhVMmE0Z0VBeEx6bnoxMWtQVGNI
+> > Vk5YUTFpZmZLQ2xHQi85ZwpOSE9lQkpodkF3eXFsd009Cj1BTExpCi0tLS0tRU5EIFBHUCBQVUJM
+> > SUMgS0VZIEJMT0NLLS0tLS0K
+> > 
+-----------------------
+cbf3826614537f7f6afd4e5acdd8c280--
+> > 
+> > 
+--------
+0b027a28ff7b3679d62bf9c0645e237c84323df6101b13efec2cbda6c95991db
+> > Content-Type: application/pgp-signature; name="signature.asc"
+> > Content-Description: OpenPGP digital signature
+> > Content-Disposition: attachment; filename="signature.asc"
+> > 
+> > -----BEGIN PGP SIGNATURE-----
+> > Version: ProtonMail
+> > 
+> > wrsEARYKAG0FgmkzzL4JEG99skRJ4X2kRRQAAAAAABwAIHNhbHRAbm90YXRp
+> > b25zLm9wZW5wZ3Bqcy5vcmeZ2P0W2ru0B3eGYB3IXCAfecIoclfQwGQfA0r7
+> > FPEmURYhBPEUw04XKeuqxX1ugW99skRJ4X2kAACyHgEA76gssWgiJUXvOjXo
+> > Nsb9ZS+YJgOSGWWX7AfCigK/iukA/iSm8bv9bPyGtw3DoQs+VOYCx5SZw/V5
+> > eNyJETDnClcO
+> > =snOi
+> > -----END PGP SIGNATURE-----
+> > 
+> > --------0b027a28ff7b3679d62bf9c0645e237c84323df6101b13efec2cbda6c95991db-- http://pan.w3.org
+
+
+
+
+
